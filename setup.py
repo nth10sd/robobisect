@@ -19,11 +19,7 @@ SUPPLEMENTARY = {
     ]}
 
 setuptools.setup(
-    name="robobisect",
-    version="0.0.1a1",
-    description="Bisect the WebKit Git repository to find regression windows",
     classifiers=[
-        # complete classifier list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
@@ -37,20 +33,24 @@ setuptools.setup(
         "Topic :: Software Development :: Testing",
         "Topic :: Utilities",
     ],
-    keywords=[
-        "bisection", "git",
-    ],
-    url="https://github.com/nth10sd/robobisect",
+    description="Bisect the WebKit Git repository to find regression windows",
     entry_points={
         "console_scripts": ["robobisect = robobisect.start:main"],
     },
-    package_data={"robobisect": [
-        "util/*",
-    ]},
-    packages=setuptools.find_packages(include=["robobisect"]),
+    extras_require=SUPPLEMENTARY,
     # install_requires=[
     # ],
-    extras_require=SUPPLEMENTARY,
+    keywords=[
+        "bisection", "git",
+    ],
+    license="MIT",
+    name="robobisect",
+    # Only for non-Python, e.g. documentation files
+    # package_data={"robobisect": [
+    # ]},
+    packages=setuptools.find_packages(include=["robobisect"]),
     python_requires=">=3.6",
+    url="https://github.com/nth10sd/robobisect",
+    version="0.0.1a1",
     zip_safe=False,
 )
