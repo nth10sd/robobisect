@@ -1,6 +1,6 @@
 """Start bisection here."""
 
-from .util import utils
+from robobisect.util import utils
 
 
 def main():
