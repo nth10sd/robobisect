@@ -38,8 +38,9 @@ setuptools.setup(
         "console_scripts": ["robobisect = robobisect.start:main"],
     },
     extras_require=SUPPLEMENTARY,
-    # install_requires=[
-    # ],
+    install_requires=[
+        "gitpython>=3.1.1,<3.2",
+    ],
     keywords=[
         "bisection", "git",
     ],
