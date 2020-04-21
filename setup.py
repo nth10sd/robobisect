@@ -52,6 +52,6 @@ setuptools.setup(
     packages=setuptools.find_packages(include=["robobisect"]),
     python_requires=">=3.6",
     url="https://github.com/nth10sd/robobisect",
-    version="0.0.1a1",
+    version="0.0.1",
     zip_safe=False,
 )
