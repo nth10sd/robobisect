@@ -99,9 +99,23 @@ class Gitrepo:  # pylint: disable=missing-class-docstring,too-many-instance-attr
         assert not self.repo.is_dirty()
 
         utils.RUN_LOG.info("Skipping changesets...")
+        utils.RUN_LOG.info(self.repo.git.bisect(
+            # Probably GCC 7-specific? (for Ubuntu 18.04)
+            ["skip", git_helpers.broken_range(
+                # SVN id 231170, approximately Apr 30 2018, SVN id 231223, approximately May 02 2018
+                "b3c0f421637b2d8c89d85e236b760cf11c85f9e4", "2f9053265ff44547ba35184871fa9044e3993b7e",
+            ).split()],
+        ))
+        utils.RUN_LOG.info(self.repo.git.bisect(
+            ["skip", git_helpers.broken_range(
+                # SVN id 238469, approximately Nov 24 2018, SVN id 238477, approximately Nov 25 2018
+                "662fdd1c89968fde8d2ab41309c853b6771359d1", "a2794a6887461e04827d6d5c5373882ccd0707ca",
+            ).split()],
+        ))
         if platform.system() == "Linux":
             utils.RUN_LOG.info(self.repo.git.bisect(
                 ["skip", git_helpers.broken_range(
+                    # SVN id 251886, approximately Oct 31, 2019, SVN id 251912, approximately Nov 1 2019
                     "ae8c116a7bfea303684a7b7ca95a03559b4d5891", "cda9526a20e6d6456c56d0f67ad6566bad96c213",
                 ).split()],
             ))
