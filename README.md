@@ -13,7 +13,7 @@ Having an exact regressing changeset in a bug report is extremely useful informa
 `robobisect` can test when builds started to fail compilation, and verify when testcases were fixed by which revision. It can also be used to find when a bug is fixed, or stopped reproducing, or when the stdout message changed.
 
 ## How do I use robobisect?
-```rm -rf ~/WebKit/WebKitBuild/ && time { date && python3.8 -m robobisect 2>&1 | tee ~/rb_log.txt ; date ; }```
+```rm -rf ~/webkit/WebKitBuild/ && time { date && python3.8 -m robobisect 2>&1 | tee ~/rb_log.txt ; date ; }```
 
 Note: argparse is on the to-do list. Some functions not working well yet - one has to change `robobisect` itself to test various stuff.
 
@@ -50,5 +50,5 @@ Not sure about the benefits of the container format for now.
 * Code coverage (via codecov.io?)
 
 ## Assumptions:
-* The WebKit/ repository is cloned into `~/WebKit/`.
-* When bisection is in-progress, the `~/WebKit/` directory is left alone by the user/other programs that may interfere with the directory state of the repository.
+* The WebKit/ repository is cloned into `~/webkit/`.
+* When bisection is in-progress, the `~/webkit/` directory is left alone by the user/other programs that may interfere with the directory state of the repository.

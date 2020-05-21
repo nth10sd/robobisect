@@ -32,7 +32,7 @@ class Gitrepo:  # pylint: disable=missing-class-docstring,too-many-instance-attr
         self.rev = self.repo.git.rev_parse("--verify", "HEAD")
 
     def compile(self, rev):  # pylint: disable=missing-function-docstring,missing-return-doc,missing-return-type-doc
-        wk_build_dir = Path.home() / "WebKit" / "WebKitBuild"
+        wk_build_dir = Path.home() / "webkit" / "WebKitBuild"
 
         # Set the rev in this Gitrepo object
         self.rev = rev

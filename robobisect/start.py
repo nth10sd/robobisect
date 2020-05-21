@@ -14,7 +14,7 @@ def main():  # pylint: disable=missing-raises-doc
     if not testcase.is_file():
         raise IOError(f"Testcase not found at: {testcase}")  # Comment out if testing for (compilation)
 
-    wkrepo = Gitrepo("git.webkit.org/WebKit", Path.home() / "WebKit")
+    wkrepo = Gitrepo("git.webkit.org/WebKit", Path.home() / "webkit")
     wkrepo.start_bisect()
 
     # after_rev = "8d9cc91e1b379f3560b56ce031aabf38b7b7a559"  # Bug 187947

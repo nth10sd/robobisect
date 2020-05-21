@@ -11,7 +11,7 @@ class Shell:  # pylint: disable=missing-class-docstring
         self.jsc_bin_path = None
 
     def compile(self):  # pylint: disable=missing-function-docstring,missing-return-doc,missing-return-type-doc
-        wk_repo_dir = Path.home() / "WebKit"
+        wk_repo_dir = Path.home() / "webkit"
         assert not (wk_repo_dir / "WebKitBuild").is_dir()
 
         compile_cmd_working_dir = wk_repo_dir / "Tools" / "Scripts"
