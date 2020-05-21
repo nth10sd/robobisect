@@ -6,16 +6,16 @@ SUPPLEMENTARY = {
     "test": [
         # "codecov>=2.0.22,<2.1",
         "coverage>=5.1,<5.2",
-        "flake8==3.7.9",
+        "flake8==3.8.1",
         "flake8-commas>=2.0.0,<2.1",
         "flake8-isort>=3.0.0,<3.1",
-        "flake8-quotes>=2.1.1,<2.2",
+        "flake8-quotes>=3.2.0,<4.0.0",
         "isort>=4.3.21,<4.4",
-        "pylint>=2.4.4,<2.5",
-        "pytest>=5.4,<5.5",
+        "pylint>=2.5.2,<2.6",
+        "pytest>=5.4.2,<5.5",
         "pytest-cov>=2.8.1,<2.9",
-        "pytest-flake8>=1.0.4,<1.1",
-        "pytest-pylint>=0.15.1,<0.16",
+        "pytest-flake8>=1.0.6,<1.1",
+        "pytest-pylint>=0.17.0,<0.18",
     ]}
 
 setuptools.setup(
